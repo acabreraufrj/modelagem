@@ -9,10 +9,10 @@ disciplina modelagem 2019-1, Alejandro
 
 ## Enderecos para abrir algum notebook deste repositorio
 
--Colab: https://colab.research.google.com/github/acabreraufrj/modelagem/blob/master/  (adicionar path/nome_archivo.ipynb)
+- Colab: https://colab.research.google.com/github/acabreraufrj/modelagem/blob/master/  (adicionar path/nome_archivo.ipynb)
 
 Exemplo: https://colab.research.google.com/github/acabreraufrj/modelagem/blob/master/aulas/Aula4-1.ipynb
 
--binder: https://mybinder.org/v2/gh/acabreraufrj/modelagem/master?filepath=  ( (path)%2F(nome_archivo.ipynb) )
+- binder: https://mybinder.org/v2/gh/acabreraufrj/modelagem/master?filepath=  ( (path)%2F(nome_archivo.ipynb) )
 
 Exemplo: https://mybinder.org/v2/gh/acabreraufrj/modelagem/master?filepath=aulas%2FAula4-1.ipynb
