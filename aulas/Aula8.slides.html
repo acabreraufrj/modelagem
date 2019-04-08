@@ -13242,6 +13242,8 @@ a.anchor-link {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
+<p>Repositorio: <a href="https://github.com/acabreraufrj/modelagem">https://github.com/acabreraufrj/modelagem</a></p>
+<p><a href="https://mybinder.org/v2/gh/acabreraufrj/modelagem/master?filepath=aulas%2FAula8.ipynb">abrir em binder</a></p>
 <h1 id="Aula-8:-O-pendulo-com-angulos-grandes,-um-pouco-de-EDO-e-simulacoes">Aula 8: O pendulo com angulos grandes, um pouco de EDO e simulacoes<a class="anchor-link" href="#Aula-8:-O-pendulo-com-angulos-grandes,-um-pouco-de-EDO-e-simulacoes">&#182;</a></h1><h2 id="Objetivos">Objetivos<a class="anchor-link" href="#Objetivos">&#182;</a></h2><ul>
 <li>revisitar a equacao diferencial (EDO) para o pendulo sem assumir angulos pequenos</li>
 <li>Obter o comportamento do periodo de oscilacao com a amplitude mediante simulacoes numericas</li>
@@ -13250,6 +13252,29 @@ a.anchor-link {
 <p>Algumas Refs:</p>
 <p><a href="https://en.wikipedia.org/wiki/Pendulum_(mathematics">https://en.wikipedia.org/wiki/Pendulum_(mathematics</a>)</p>
 <p><a href="http://www.leapsecond.com/hsn2006/pendulum-period-agm.pdf">http://www.leapsecond.com/hsn2006/pendulum-period-agm.pdf</a></p>
+
+</div>
+</div>
+</div></section></section><section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Contexto:-o-que-estamos-fazendo?">Contexto: o que estamos fazendo?<a class="anchor-link" href="#Contexto:-o-que-estamos-fazendo?">&#182;</a></h1><h1 id="Modelagem-=-1-+-2-+-3">Modelagem = 1 + 2 + 3<a class="anchor-link" href="#Modelagem-=-1-+-2-+-3">&#182;</a></h1><p><img src="./figs/diagr_modelagem_def.jpg" alt=""></p>
+
+</div>
+</div>
+</div></section></section><section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Contexto:-o-que-estamos-fazendo?">Contexto: o que estamos fazendo?<a class="anchor-link" href="#Contexto:-o-que-estamos-fazendo?">&#182;</a></h1><h1 id="Modelagem-=-1-+-2-+-3">Modelagem = 1 + 2 + 3<a class="anchor-link" href="#Modelagem-=-1-+-2-+-3">&#182;</a></h1><h2 id="No-pendulo-com-angulos-grandes:">No pendulo com angulos grandes:<a class="anchor-link" href="#No-pendulo-com-angulos-grandes:">&#182;</a></h2><ul>
+<li><p>(1) considerar o angulo $\theta(t)$ formado pela corda e uma linha vertical fixa como funcao de $t$. Propomos que a aceleracao $\ddot \theta(t)$ é proporcional a $sen(\theta(t))$ (veremos a seguir por que esta proposta)</p>
+</li>
+<li><p>(2) precisamos resolver a eq. diferencial (2a ordem) $\ddot \theta + c \ sen(\theta) = 0$. como caracterizar as solucoes? admite solucoes periodicas? qual é o periodo $T(\theta_0)$ como funcao das condicoes iniciais ?</p>
+</li>
+<li><p>(3) comparamos nossas predicoes teoricas com dados de experimentos (já fizemos no caso $\theta \sim 0$, $sen(\theta)\sim \theta$ angulos pequenos)</p>
+</li>
+</ul>
 
 </div>
 </div>
