@@ -1,4 +1,4 @@
-# modelagem (Repositorio*)
+# modelagem (Repositorio* de material com status 'draft')
 disciplina modelagem 2019-1, Alejandro
 *[Link ao repositorio no github](https://github.com/acabreraufrj/modelagem)
 
