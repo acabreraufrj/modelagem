@@ -14844,6 +14844,85 @@ poptot final = 4620.431774067431
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Eq.-de-Poisson-2d">Eq. de Poisson 2d<a class="anchor-link" href="#Eq.-de-Poisson-2d">&#182;</a></h1>
+</div>
+</div>
+</div></section></section><section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<ul>
+<li>incógnita $u:D \subset \mathbb{R}^2 \to \mathbb{R}$
+$$ \partial_x^2 u + \partial_y^2 u = f(x,y)$$
+com $f$ função dado.</li>
+</ul>
+<ul>
+<li>veremos caso particular de condições de bordo (Dirichlet): todos os nodos do bordo estão dados
+$$ u|_{\partial D} = h : \partial D \to \mathbb{R}$$</li>
+</ul>
+
+</div>
+</div>
+</div></section></section><section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Discretiza&#231;ao-num-dominio-retangular-$D=[0,L_x]\times-[0,L_y]$">Discretiza&#231;ao num dominio retangular $D=[0,L_x]\times [0,L_y]$<a class="anchor-link" href="#Discretiza&#231;ao-num-dominio-retangular-$D=[0,L_x]\times-[0,L_y]$">&#182;</a></h3><ul>
+<li><a href="https://en.wikipedia.org/wiki/Discrete_Poisson_equation">Eq. de Poisson discreta</a></li>
+<li>consideramos discretização com $\Delta x = \Delta y$,
+$$ u(i,j) := u(i \Delta x, j \Delta y),\  i=0,..,n_x-1, \ j=0,..,n_y-1$$</li>
+<li>os valores $u(i,j)$ correspondientes ao interior de $D$ podem ser compilados em um vetor (ordenados "naturalmente")
+$$ U = (u(1,1),u(2,1),u(3,1),...,u(n_x-2,1),u(1,2),u(2,2),...) $$
+de tamanho $(n_x-2) (n_y -2)$</li>
+<li>pensando no laplaciano discreto, a eq. em diferenças finitas toma a forma:
+$$ \delta^2_x u + \delta^2_y u (i,j) = \frac{1}{\Delta x^2} ( u(i+1,j)+u(i-1,j)+u(i,j+1)+u(i,j-1)-4u(i,j)) = f(i,j)$$</li>
+<li>as condições de bordo são $u(i,j) = h(i,j)$ para $(i,j)$ representando pontos no bordo</li>
+</ul>
+
+</div>
+</div>
+</div></section></section><section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<ul>
+<li>pode-se juntar todas as eqs. algebricas resultantes em um grande sistema linear da forma
+$$ A U = b $$
+onde $A$ é uma matriz quadrada com $(n_x-2) (n_y -2)$ linhas, que é esparça com entradas $0,-1$ ou $4$, e $b$ é um vetor que tem of $f(i,j)$ correspondentes ao interior de $D$ assim como os $h(i,j)$ correspondentes ao bordo</li>
+<li>como $A$ é esparça, o sistema pode-se resolver em muitos casos, obtendo a aproximação numérica $u(i,j)$ para $u(x,y)$</li>
+</ul>
+
+</div>
+</div>
+</div></section></section><section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><strong>Obs</strong>: uma modelagem concreta consiste em que $u(x,y)$ descreve o potencial eletrico gerado por uma distribuição de carga $\rho(x,y)$ via $f(x,y) = -\rho(x,y)/\epsilon_0$ (<a href="https://en.wikipedia.org/wiki/Electric_potential">wiki</a>).</p>
+<p>Se tem uma superficie conductora $\Sigma$, $u$ tem uma condiçao de bordo nesta superficie: $u|_\Sigma$ é constante (suponhamos zero se o condutor está conectado 'a terra').</p>
+<p>É interessante achar o potencial eletrico dado por diversas distribuicoes de carga e configuracoes de superficies condutoras (verificar <a href="https://en.wikipedia.org/wiki/Method_of_image_charges">'cargas imagens'</a>).</p>
+
+</div>
+</div>
+</div></section></section><section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><img src="./figs/cargas_eletricas.png" alt=""></p>
+
+</div>
+</div>
+</div></section></section><section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="ficar&#225;-como-o-exercicio-do-dia-!">ficar&#225; como o exercicio do dia !<a class="anchor-link" href="#ficar&#225;-como-o-exercicio-do-dia-!">&#182;</a></h3>
+</div>
+</div>
+</div></section></section><section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
 <h1 id="Um-modelo-bi-dimensional-para-ondas-sismicas-(feito-pelo-Prof.-Ricardo)">Um modelo bi-dimensional para ondas sismicas (feito pelo Prof. Ricardo)<a class="anchor-link" href="#Um-modelo-bi-dimensional-para-ondas-sismicas-(feito-pelo-Prof.-Ricardo)">&#182;</a></h1>
 </div>
 </div>
@@ -15401,7 +15480,8 @@ Courant condition = 0.5
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Exercicios:">Exercicios:<a class="anchor-link" href="#Exercicios:">&#182;</a></h1><ul>
+<h1 id="Exercicios:">Exercicios:<a class="anchor-link" href="#Exercicios:">&#182;</a></h1><h4 id="(*)-resolver-a-eq.-de-Poisson-2d:">(*) resolver a eq. de Poisson 2d:<a class="anchor-link" href="#(*)-resolver-a-eq.-de-Poisson-2d:">&#182;</a></h4><p>pensando que $u$ é o potencial elétrico e que $f(x,y) = -\rho(x,y)/\epsilon_0$ esta dado por uma distribuição de carga eletrica, pensando que o bordo $\partial D$ é um condutor a terra ($u|_{\partial D}=0$). Depois, colocar sub-compartimentos condutores (eg: dividir a caixa em 2) e verificar que aparecem "cargas imagem".</p>
+<h5 id="Outros:">Outros:<a class="anchor-link" href="#Outros:">&#182;</a></h5><ul>
 <li>fazer um ajuste dos parametros $k$ e $\epsilon$ no modelo do café modificado.</li>
 <li>fazer um modelo 3d para a difusão do calor em uma caneca com café quente. Pensar $u\equiv u(t,r,\theta,z)$ em coordenadas cilindricas $(r,\theta,z)$, por simplicidade assumir independencia em $\theta$, usar que o Laplaciano em coords. cilindricas (<a href="https://en.wikipedia.org/wiki/Laplace_operator">wiki</a>):
 $$ \Delta f = \frac{1}{r} \frac{\partial }{\partial r}(r \frac{\partial f}{\partial r}) + \frac{1}{r^2}\frac{\partial^2 f}{\partial \theta^2} + \frac{\partial^2 f}{\partial z^2} $$</li>
@@ -15411,12 +15491,6 @@ $$ \Delta f = \frac{1}{r} \frac{\partial }{\partial r}(r \frac{\partial f}{\part
 </ul>
 </li>
 <li>variar parametros no codigo de ondas sismicas para entender o funcionamento</li>
-<li>Modificar o codigo de ondas sismicas para resolver a eq. de Poisson 2d: $u\equiv u(x,y)$
-$$ \partial_x^2 u + \partial_y^2 u = f(x,y)$$</li>
-<li><ul>
-<li>caso $f(x,y) = -\rho(x,y)/\epsilon_0$ então $u$ representa o potencial eletrico gerado pela distribuição de carga $\rho$ (<a href="https://en.wikipedia.org/wiki/Electric_potential">wiki</a>). Se tem uma superficie conductora $\Sigma$, $u$ tem uma condiçao de bordo nesta superficie: $u|_\Sigma$ é constante. Achar o potencial eletrico dado por diversas distribuicoes de carga e configuracoes de superficies condutoras (verificar <a href="https://en.wikipedia.org/wiki/Method_of_image_charges">'cargas imagens'</a>).</li>
-</ul>
-</li>
 </ul>
 
 </div>
