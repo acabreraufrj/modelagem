@@ -13909,10 +13909,10 @@ $$ B_j = \beta(0) B_j \Delta t + \sum_{k=1}^j \beta(k\Delta t) B_{j-k} e^{-\int_
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h1 id="Cuidado:">Cuidado:<a class="anchor-link" href="#Cuidado:">&#182;</a></h1><ul>
-<li>a equação $\partial_t u + \partial_a u = f$ pode ser instável numéricamente dependendo dos valores de $\Delta t, \Delta a$</li>
+<li>a equação $\partial_t u + \partial_a u = f$ pode ser instável numéricamente dependendo de como discretizamos as derivadas $\partial_t, \partial_a$ e dos valores de $\Delta t, \Delta a$</li>
 <li>a aprox. numerica desenvolve singularidades em alguns casos
 <img src="./figs/desenv_sing_numer.png" alt=""></li>
-<li>um criterio de estabilidade é $0\leq \Delta t/\Delta a \leq 1$ ("Courant number") <a href="http://indico.ictp.it/event/a06220/session/18/contribution/10/material/0/2.pdf"> [ Ref] </a></li>
+<li>usando $\delta_tu=(u(t+\Delta t)-u(t))/\Delta t$ e $\delta_a u = (u(a)-u(a-\Delta a))/\Delta a$, um criterio de estabilidade é $0\leq \Delta t/\Delta a \leq 1$ ("Courant number") <a href="http://indico.ictp.it/event/a06220/session/18/contribution/10/material/0/2.pdf"> [ Ref] </a></li>
 </ul>
 
 </div>
