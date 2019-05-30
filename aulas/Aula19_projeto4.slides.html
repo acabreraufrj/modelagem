@@ -13309,11 +13309,26 @@ $$ v_0(x,y) = \partial_t u_0(x-t c, y) |_{t=0} = -c \partial_x u_0(x,y) $$</li>
 <li>a onda comença a se propagar com $t$ hacia a direita</li>
 <li>em algum instante, ela comença a se "refletir" pelos obstáculos em várias direções</li>
 <li>parte da onda passa para a região direita e parte fica na região esquerda</li>
-<li>uma medida de "quanto da onda passou para a direita a tempo $t$" é a seguinte integral
-$$ I(t) = \int_{L_x/2}^{L_x}dx \int_{0}^{L_y}dy \ |u(t,x,y)|^2 $$</li>
+</ul>
+
+</div>
+</div>
+</div></section></section><section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<ul>
+<li>lembrete: a densidade espacial de energia da onda a tempo $t$ é 
+$$\mathcal{E}(t,x,y) = \frac{1}{2}\left((\partial_t u)^2(t,x,y) + c^2 ((\partial_x u)^2(t,x,y)+(\partial_y u)^2(t,x,y))\right)$$</li>
+</ul>
+<p><strong>Obs</strong>: a energia total $E(t) = \int_D \mathcal{E}(t,x,y) dx \ dy$ no dominio completo $D$ é constante no tempo (Exercicio: verificar derivando $\frac{d}{dt}E(t)$ embaixo da integral, integrando por partes em $x$ e $y$, e usando que $u$ resolve a eq. de onda)</p>
+<ul>
+<li>uma medida de "quanto da onda passou para a direita a tempo $t$" é a <em>energia da onda na região direita</em>:
+$$ I(t) = \int_{L_x/2}^{L_x}dx \int_{0}^{L_y}dy \ \ \mathcal{E}(t,x,y) $$
+(notar que só integramos $x \in [L_x/2,L_x]$).</li>
 </ul>
 <p><strong>Obs</strong>: $I(0) = 0 $ e $I(t)=0$ para $t$ pequeno comparado com $L_x/(2c)$ (tempo que leva chegar na metade)</p>
-<p><strong>Obs</strong>: a quantidade transmitida $I(t)$ deve ser comparada com a 'massa' inicial da onda $\mu_0 = \int_{D} |u_0|^2 $</p>
+<p><strong>Obs</strong>: a quantidade transmitida $I(t)$ deve ser comparada com a energia inicial total (conservada) da onda $E = \int_{D} \mathcal{E} $</p>
 
 </div>
 </div>
@@ -13377,7 +13392,7 @@ $$ u(i,j,k) = 0 \ se \ (j,k) \ corresponde \ a \ algum \ R_\alpha, \ \forall i $
 <li>calcular (numéricamente) a integral $I(t)$ de transmissão para o lado direito e analizar sua dependencia com o tempo</li>
 <li>entender qualitativamente como a transmissão para o lado direito depende do comprimento caraterístico da onda inicial $r$ e da separação entre os obstáculos $d$ (e do número $M$ de obstáculos e a largura $a$)</li>
 </ul>
-<p><strong>Obs</strong>: se $d=0$ a onda não se transmite e $I(t)=0 \forall t$. Se $d&gt;&gt;r$, $I(t) = \mu_0$ para $t \sim 10$ (toda a onda passou). É interessante achar a relação crítica $r/d$ tal que a transmissão para a direita comença a ser $1$% com respeito a $\mu_0$.</p>
+<p><strong>Obs</strong>: se $d=0$ a onda não se transmite e $I(t)=0 \forall t$. Se $d&gt;&gt;r$, $I(t) = E$ para $t \sim 10$ (toda a onda passou). É interessante achar a relação crítica $r/d$ tal que a transmissão para a direita comença a ser $1$% com respeito de $E$.</p>
 
 </div>
 </div>
